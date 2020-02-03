@@ -50,7 +50,7 @@ public class ScriptActionGetSlotItemEnchants extends ScriptAction {
 				Enchantment enchantment;
 				NBTTagList nbttaglist;
 				if (itemID.equalsIgnoreCase("enchanted_book"))
-					nbttaglist = ItemEnchantedBook.getEnchantments(slotStack);
+					nbttaglist = ((ItemEnchantedBook)slotStack.getItem()).getEnchantments(slotStack);
 				else
 					nbttaglist = slotStack.getEnchantmentTagList();
 				for (int j = 0; j < nbttaglist.tagCount(); j++) {
